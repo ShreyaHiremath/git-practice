@@ -7,5 +7,6 @@
  - git add 
  - git commit 
  - git push 
-- git restore 
--- git fetch vs git pull
+- git restore
+- git fetch vs git pull
+- resolving merge conflicts
