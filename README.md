@@ -8,3 +8,4 @@
  - git commit 
  - git push 
 - git restore 
+-- git fetch vs git pull
