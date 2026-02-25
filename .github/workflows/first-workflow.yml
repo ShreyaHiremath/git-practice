@@ -9,6 +9,15 @@ jobs:
   hello-job:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Print Message
-        run: echo "Hello Shreya! Your first GitHub Action is running."
+steps:
+  - name: Print Message
+    run: echo "Hello Shreya! Your pipeline is running."
+
+  - name: Show Date
+    run: date
+
+  - name: Check Current User
+    run: whoami
+
+  - name: List Files
+    run: ls -la
