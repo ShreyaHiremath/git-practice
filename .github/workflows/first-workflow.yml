@@ -20,4 +20,4 @@ jobs:
         run: cp app.txt deployment
       
       - name: Show Deployment Files 
-       run: ls -la deployment
+        run: ls -la deployment
