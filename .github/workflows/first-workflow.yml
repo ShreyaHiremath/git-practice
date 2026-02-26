@@ -10,14 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "Hello Shreya! Your pipeline is running."
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Make Script Executable
+        run: chmod +x myscript.sh
 
-      - name: Show Date
-        run: date
-
-      - name: Check Current User
-        run: whoami
-
-      - name: List Files
-        run: ls -la
+      - name:   Run Script
+        run: ./myscript.sh
