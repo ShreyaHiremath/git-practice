@@ -19,5 +19,5 @@ jobs:
       - name: Copy App to Deployment Folder
         run: cp app.txt deployment
       
-      -name: Show Deployment Files 
+      - name: Show Deployment Files 
        run: ls -la deployment
