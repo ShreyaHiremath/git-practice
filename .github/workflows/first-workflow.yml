@@ -8,7 +8,7 @@ on:
 jobs:
   azure-login-job:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -26,6 +26,9 @@ jobs:
 
       - name: Run Azure CLI Command
         run: az group list --output table
+
+
+      
 
 
         
