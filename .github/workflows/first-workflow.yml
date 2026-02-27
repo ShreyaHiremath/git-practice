@@ -1,4 +1,4 @@
-name: Azure Resource Deployment
+name: Deploy Storage Account
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy-rg:
+  deploy-storage:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,13 +18,15 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Create Resource Group
+      - name: Create Storage Account
         run: |
-          az group create \
-            --name rg-github-demo \
-            --location eastus
+          az storage account create \
+            --name storageforcicd \
+            --resource-group rg-github-demo \
+            --location eastus \
+            --sku Standard_LRS
 
-      - name: Verify Resource Groups
-        run: az group list --output table
+      - name: Verify Storage Accounts
+        run: az storage account list --output table
 
         
