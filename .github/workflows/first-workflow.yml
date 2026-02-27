@@ -26,3 +26,6 @@ jobs:
 
       - name: Run Azure CLI Command
         run: az group list --output table
+
+
+        
